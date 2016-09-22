@@ -1,0 +1,123 @@
+<html>
+<head>
+<title> Statistics Generator </title>
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+
+<style type="text/css">
+
+#largeImg {
+	border: solid 1px #ccc;
+	width: 550px;
+	height: 350px;
+	padding: 5px;
+}
+.thumbs img {
+	border: solid 1px #ccc;
+	width: 100px;
+	height: 100px;
+	padding: 4px;
+}
+.thumbs img:hover {
+	border-color: #FF9900;
+}
+</style>
+
+</head>
+
+<body>
+<div id="main">
+<table border="0px" width="100%" height="100%" cellpadding="0px" cellspacing="0px">  
+<tr bgcolor="">
+<td height="15%" width="60%" align="middle"> <img src="images\stats.png" /> </td>
+
+<td align="center">
+
+<table border="0px" width="100%" height="100%" cellpadding="0px" cellspacing="0px">
+<tr>
+<td align="center"> 
+[ <a href="index.html">Home</a> ]
+[ <a href="help.html">Help</a> ]
+[ <a href="api.html">API</a> ]
+[ <a href="videos.html">Videos</a> ]
+[ <a href="developers.html">Developers</a> ]
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td align="center" colspan="2">
+
+<p><img id="largeImg" src="images/statgen.jpg" alt="Large image" /></p>
+
+<p class="thumbs">
+	<a href="images\bar1.jpg" title="Image 2"><img src="images\bar1.jpg" /></a>
+	<a href="images\statgen.jpg" title="Image 3"><img src="images\statgen.jpg" /></a>
+	<a href="images\pie1.jpg" title="Image 4"><img src="images\pie1.jpg" /></a>
+	<a href="images\pie2.jpg" title="Image 5"><img src="images\pie2.jpg" /></a>
+	<a href="images\statistics.jpg" title="Image 6"><img src="images\statistics.jpg" /></a>
+</p>
+
+
+</td>
+</tr>
+
+<tr>
+
+</tr>
+<tr>
+<td height="75%" width="60%" align="top"> 
+ </td>
+<td height="75%" width="40%" >
+
+
+
+
+<table width="100%">
+<tr>
+<td width="15%"></td>
+<td align="left">
+
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+<tr>
+<td height="10%" width="60%" align="right"> <a href="#">&copy; Project StatGen 2011 </a></td>
+<td height="10%" width="40%"> </td>
+</tr>
+</table>
+</div>
+</body>
+</html>

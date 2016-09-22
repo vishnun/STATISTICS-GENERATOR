@@ -1,0 +1,136 @@
+<html>
+<head>
+<title> Statistics Generator </title>
+<style type="text/css">
+.slideshow { height: 232px; width: 232px; margin:125px; margin-top:0px}
+.slideshow img { padding: 0px; border: 0px solid #ccc; background-color: #eee; }
+</style>
+<!-- include jQuery library -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.74.js"></script>
+
+<!--  initialize the slideshow when the DOM is ready -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+</script>
+<script type="text/javascript">
+function validateform()
+{
+	var n=document.forms["register"]["name"].value
+	var e=document.forms["register"]["email"].value
+	var u=document.forms["register"]["rusername"].value
+	var p1=document.forms["register"]["rpassword1"].value
+	var p2=document.forms["register"]["rpassword2"].value
+	if(n=="" || n==null || e=="" || e==null || u=="" || u==null || p1=="" || p1==null || p2=="" || p2==null)
+	{
+		alert("Please fill empty fields !");
+		return false;
+	}
+	if(p1!=p2)
+	{
+		alert("Passwords do not match !");
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<div id="main">
+<table border="0px" width="100%" height="100%" cellpadding="0px" cellspacing="0px">  
+<tr bgcolor="">
+<td height="15%" width="60%" align="middle"> <img src="images\stats.png" /> </td>
+<td height="15%" width="40%" >
+<table border="0px" width="100%" height="100%">
+<tr>
+<td width="30%" > </td>
+<td width="30%" align="left" ><a href="#">Forgot the password ?</a></td>
+<td width="40%" ></td>
+</tr>
+<tr>
+<td width="30%" ><b>Username :</b></td>
+<td width="30%" ><b>Password :</b></a></td>
+<td width="40%" ></td>
+</tr>
+<tr>
+<form action="#" method="post">
+<td > <input type="text" name="username"  /> </td> 
+<td ><input type="password" name="password" /></td>
+<td ><input type="submit" value="Login"/></td>
+</form>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="75%" width="60%" align="top"> 
+<div class="slideshow">
+		<img src="images\statgen.jpg" width="600" height="350" />
+		<img src="images\bar1.jpg" width="600" height="350" />
+		<img src="images\pie1.jpg" width="600" height="350" />
+		<img src="images\statistics.jpg" width="600" height="350" />
+		<img src="images\statistics1.jpg" width="600" height="350" />
+		<img src="images\pie2.jpg" width="600" height="350" />
+</div>
+ </td>
+<td height="75%" width="40%" >
+<font face="Calibri" size="6"> Register</font> <br>
+<font face="Calibri" size="5"> Its free !</font>
+<hr width="80%" align="left">
+<table border="0px" width="100%" height="40%" >
+<form action="#" type="post" name="register" onsubmit="return validateform()">
+<tr>
+<td width="30%" height="10%" align="right" height="10%" ><b> Name : </b></td>
+<td width="70%"> <input type="text" name="name"/> </td>
+</tr>
+<tr>
+<td width="30%" align="right" height="10%"><b> Email : </b></td>
+<td width="70%"> <input type="text" name="email"/> </td>
+</tr>
+<tr>
+<td width="30%" align="right" height="10%"><b> Username : </b></td>
+<td width="70%"> <input type="text" name="rusername"/> </td>
+</tr>
+<tr>
+<td width="30%" align="right" height="10%"><b> Password : </b></td>
+<td width="70%"> <input type="password" name="rpassword1"/> </td>
+</tr>
+<tr>
+<td width="30%" align="right"height="10%"><b> Re-Enter Password : </b></td>
+<td width="70%"> <input type="password" name="rpassword2"/> </td>
+</tr>
+<tr>
+<td align="right"> <input type="submit" value="Register" /> </td>
+</tr>
+</form>
+</table>
+<hr width="80%" align="left">
+<table width="100%">
+<tr>
+<td width="15%"></td>
+<td align="left">
+
+<a href="help.html">Help</a> |
+<a href="gallery.html">Gallery</a> |
+<a href="videos.html">Videos</a> |
+<a href="api.html">API</a> |
+<a href="developers.html">Developers</a>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+<tr>
+<td height="10%" width="60%" align="right"> <a href="#">&copy; Project StatGen 2011 </a></td>
+<td height="10%" width="40%"> </td>
+</tr>
+</table>
+</div>
+</body>
+</html>
